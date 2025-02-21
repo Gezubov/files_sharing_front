@@ -11,7 +11,7 @@ const SignUp = () => {
     event.preventDefault()
     const newUser = { username, password, email }
 
-    axios.post('http://localhost:8081/user', newUser)
+    axios.post('http://localhost:8081/auth/register', newUser)
       .then(response => {
         console.log('Пользователь создан:', response.data)
         // Здесь можно добавить логику для обработки успешного создания пользователя
